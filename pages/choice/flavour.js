@@ -22,7 +22,7 @@ export default function Flavour() {
                 {cart.map((item, index) => (
                     <div>
                         {item}
-                        <i onClick={() => removeItem(index)} key={index} className="fas fa-trash"></i>
+                        <i key={index} onClick={() => removeItem(index)} className="fas fa-trash"></i>
                     </div>
                 ))}
 
