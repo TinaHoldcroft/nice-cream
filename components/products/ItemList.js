@@ -11,19 +11,18 @@ export default function ItemList({ items, onChange, onClick, group, disabled }) 
         <fieldset>
             <legend>{group}</legend>
             {items.map((item, index) => (
-                <>
+                <div key={index} >
                   <input 
                     id={item} 
                     name={group} 
                     value={item} 
                     onChange={handleClick} 
                     onClick={onClick}
-                    key={index} 
                     type="radio"
                     disabled={disabled}
                     />
                   <label htmlFor={item}>{item}</label>
-                </>
+                </div>
             ))}
         </fieldset>
     );

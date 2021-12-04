@@ -20,9 +20,9 @@ export default function Topping() {
         <>
             <form>
                 {cart.map((item, index) => (
-                    <div>
+                    <div key={index}>
                         {item}
-                        <i key={index} onClick={() => removeItem(index)} className="fas fa-trash"></i>
+                        <i onClick={() => removeItem(index)} className="fas fa-trash"></i>
                     </div>
                 ))}
 
