@@ -18,7 +18,7 @@ export default function ItemList({ items, onChange, onClick, group, disabled }) 
                     value={item} 
                     onChange={handleClick} 
                     onClick={onClick}
-                    type="radio"
+                    type={"radio"}
                     disabled={disabled}
                     />
                   <label htmlFor={item}>{item}</label>

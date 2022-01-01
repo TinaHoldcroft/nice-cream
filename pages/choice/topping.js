@@ -3,16 +3,13 @@ import ItemList from "../../components/products/ItemList";
 import { topping } from "../../components/products/StoreItems";
 
 export default function Topping() {
-    const [disable, setDisable] = useState(false)
     const [cart, setCart] = useState([])
-    const handleDisable = () => { setDisable(!disable) }
 
     const addItem = (item) => {
         setCart((prev) => { return [item, ...prev] })
     }
 
     const removeItem = (targetIndex) => {
-        setDisable(!disable)
         setCart((prev) => { return prev.filter((item, index) => index !== targetIndex) })
     }
 
@@ -26,7 +23,7 @@ export default function Topping() {
                     </div>
                 ))}
 
-                <ItemList onClick={handleDisable} disabled={disable} group="topping" items={topping} onChange={addItem} />
+                <ItemList group="topping" items={topping} onChange={addItem} />
             </form>
         </>
     )
