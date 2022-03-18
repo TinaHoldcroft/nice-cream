@@ -14,7 +14,7 @@ class MyDocument extends Document {
             <Html lang={lang}>
                 <Head>
                     <meta charset="utf-8"/>
-                    <script async src="https://kit.fontawesome.com/a83d77d417.js"/>
+                    <script async src="https://kit.fontawesome.com/a83d77d417.js" />
                     <meta name="theme-color" content="#FFFFFF"/>
                 </Head>
                 
